@@ -94,8 +94,8 @@ class ProfCoursTest extends TestCase
             new Cours("Cours8", "4", 5),       // idcours = 8
             new Cours("Cours9", "3", 5),        // idcours = 9   ** A MODIFIER **
             new Cours("IOT", "10", 1),        //
-	    new Cours("IA", "12", 3),        // 
-	    new Cours("EDL", "5", 6),        // 
+			new Cours("IA", "12", 3),        // 
+			new Cours("EDL", "5", 6),        // 
             /**
             *
             * Question 7 : Insérer les enregistrements suivantes dans la table cours
@@ -182,7 +182,7 @@ class ProfCoursTest extends TestCase
         foreach (self::$cours_a as $cours) {
             $cours->add($conn);
         }
-        $expectedC = count(self::$cours);
+        $expectedC = count(self::$cours_a);
         $num_recordsC = Cours::count($conn);
         $this->assertEquals($expectedC, $num_recordsC, "Enregistrement des cours ...\n");
         $this->assertCount($num_recordsC, self::$cours_a, "Enregistrement des cours ...\n");
